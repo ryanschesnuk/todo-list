@@ -8,12 +8,6 @@ angular.module('todoListApp')
     $scope.todos.unshift(todo);
   };
 
-  $scope.helloConsole = dataService.helloConsole;
-
-  $scope.helloWorld = function() {
-    console.log("Hello there! This is the helloWorld controller function, in the mainCtrl!");
-  };
-
   dataService.getTodos(function(response) {
     console.log(response.data);
     $scope.todos = response.data;
